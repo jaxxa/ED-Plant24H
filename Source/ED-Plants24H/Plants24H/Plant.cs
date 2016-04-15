@@ -85,7 +85,7 @@ namespace Enhanced_Development.Plants24H
         public override string GetInspectString()
         {
             StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append(base.GetInspectString());
+            //stringBuilder.Append(base.GetInspectString());
             if (this.LifeStage == PlantLifeStage.Growing)
             {
                 stringBuilder.AppendLine(Translator.Translate("PercentGrowth", (object)this.GrowthPercentString));
