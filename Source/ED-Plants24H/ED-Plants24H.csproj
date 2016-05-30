@@ -35,6 +35,10 @@
       <HintPath>..\..\..\..\lib\A13.1135\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Community Core Library">
+      <HintPath>..\..\..\..\lib\CCL 0.13.2\Community Core Library.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,12 +51,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Plants24H\Plant.cs" />
+    <Compile Include="Plants24H\DetourInjector.cs" />
+    <Compile Include="Plants24H\Detours\_Plant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Plants24H\PlantBasedOn%28UseDiff%29.txt" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
