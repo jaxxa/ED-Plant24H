@@ -7,7 +7,7 @@
     <ProjectGuid>{975C4632-336D-4100-87BB-32D726A1D86D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ED_Plants24H</RootNamespace>
+    <RootNamespace>EnhancedDevelopment.Plants24H</RootNamespace>
     <AssemblyName>ED-Plants24H</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -17,7 +17,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Assemblies\</OutputPath>
+    <OutputPath>..\..\ED-Plant24H\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -32,11 +32,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\lib\A13.1135\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\lib\A14.1230\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Community Core Library">
-      <HintPath>..\..\..\..\lib\CCL 0.13.2\Community Core Library.dll</HintPath>
+      <HintPath>..\..\..\..\..\CommunityCoreLibrary\_Mod\User Release\Community Core Library\Assemblies\Community Core Library.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -46,7 +46,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\lib\A13.1135\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\lib\A14.1230\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

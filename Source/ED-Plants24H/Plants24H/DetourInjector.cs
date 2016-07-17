@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using Verse;
 
-namespace ED_Plants24H.Plants24H
+namespace EnhancedDevelopment.Plants24H
 {
 
     public class DetourInjector : SpecialInjector
@@ -17,24 +17,24 @@ namespace ED_Plants24H.Plants24H
 
             // ---------------------------------------------- Detour Plant.Resting ----------------------------------------------
 
-            //Log.Message("RimWorld_Plant_Resting.");
+            Log.Message("RimWorld_Plant_Resting.");
             PropertyInfo RimWorld_Plant_Resting = typeof(RimWorld.Plant).GetProperty("Resting", BindingFlags.NonPublic | BindingFlags.Instance);
             this.LogNULL(RimWorld_Plant_Resting, "RimWorld_Plant_Resting");
 
-            //Log.Message("RimWorld_Plant_Resting_Getter.");
+            Log.Message("RimWorld_Plant_Resting_Getter.");
             MethodInfo RimWorld_Plant_Resting_Getter = RimWorld_Plant_Resting.GetGetMethod(true);
             this.LogNULL(RimWorld_Plant_Resting_Getter, "RimWorld_Plant_Resting_Getter");
 
 
-            //Log.Message("ED_Plant_Resting.");
-            PropertyInfo ED_Plant_Resting = typeof(ED_Plants24H.Plants24H.Detours._Plant).GetProperty("_Resting", BindingFlags.NonPublic | BindingFlags.Instance);
+           Log.Message("ED_Plant_Resting.");
+            PropertyInfo ED_Plant_Resting = typeof(EnhancedDevelopment.Plants24H.Detours._Plant).GetProperty("_Resting", BindingFlags.NonPublic | BindingFlags.Instance);
             this.LogNULL(ED_Plant_Resting, "ED_Plant_Resting");
 
-            //Log.Message("ED_Plant_Resting_Getter.");
+            Log.Message("ED_Plant_Resting_Getter.");
             MethodInfo ED_Plant_Resting_Getter = ED_Plant_Resting.GetGetMethod(true);
             this.LogNULL(ED_Plant_Resting_Getter, "ED_Plant_Resting_Getter");
 
-            //Log.Message("TryDetourFromTo.");
+            Log.Message("TryDetourFromTo.");
             if (!CommunityCoreLibrary.Detours.TryDetourFromTo(RimWorld_Plant_Resting_Getter, ED_Plant_Resting_Getter))
             {
                 return false;

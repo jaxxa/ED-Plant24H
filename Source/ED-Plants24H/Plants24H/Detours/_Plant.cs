@@ -6,7 +6,7 @@ using Verse;
 using RimWorld;
 using UnityEngine;
 
-namespace ED_Plants24H.Plants24H.Detours
+namespace EnhancedDevelopment.Plants24H.Detours
 {
     internal class _Plant : RimWorld.Plant
     {
@@ -18,6 +18,5 @@ namespace ED_Plants24H.Plants24H.Detours
                 return false;
             }
         }
-
     }
 }
