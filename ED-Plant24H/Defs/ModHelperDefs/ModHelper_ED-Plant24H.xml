@@ -5,7 +5,7 @@
 		<ModName>ED-Plant24H</ModName>
 		<minCCLVersion>0.14.0</minCCLVersion>
 		<SpecialInjectors>
-			<li>ED_Plants24H.Plants24H.DetourInjector</li>
+			<li>EnhancedDevelopment.Plants24H.DetourInjector</li>
 		</SpecialInjectors>
 	</CommunityCoreLibrary.ModHelperDef>
 </Defs>

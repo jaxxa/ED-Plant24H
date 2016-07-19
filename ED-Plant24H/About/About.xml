@@ -5,7 +5,9 @@
     <targetVersion>0.14.1230</targetVersion>
 	<url>https://ludeon.com/forums/index.php?topic=15606.0</url>
 	<description>
-	Requires: Community Core Library
+	This mod Requires CCL to be installed.
+	https://ludeon.com/forums/index.php?topic=16599.0
+	
 The module changes the plants to grow 24 Hours a day. In the base game plants will rest at night time and stop growing, regardless of the light levels. This removed that restriction so plants will keep growing, if all the other conditions such as light are still met, allowing your sunlamps to effectively increase the growing speed.
 	</description>
 </ModMetaData>
