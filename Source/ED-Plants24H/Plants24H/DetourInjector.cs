@@ -1,4 +1,4 @@
-﻿using CommunityCoreLibrary;
+﻿//using CommunityCoreLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using Verse;
 
 namespace EnhancedDevelopment.Plants24H
 {
-
+    /*
     public class DetourInjector : SpecialInjector
     {
 
@@ -60,4 +60,5 @@ namespace EnhancedDevelopment.Plants24H
             }
         }
     }
+*/
 }
