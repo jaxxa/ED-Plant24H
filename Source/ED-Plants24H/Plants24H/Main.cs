@@ -14,6 +14,7 @@ namespace EnhancedDevelopment.Plants24H.Plants24H
     {
         static Main()
         {
+            Log.Message("Plants24H, Starting Patching.");
 
             //var harmony = HarmonyInstance.Create("com.company.project.product");
             //var original = typeof(TheClass).GetMethod("TheMethod");
@@ -23,30 +24,31 @@ namespace EnhancedDevelopment.Plants24H.Plants24H
 
             var harmony = HarmonyInstance.Create("Jaxxa.EnhancedDevelopment.Plants24H");
             //harmony.PatchAll(Assembly.GetExecutingAssembly());
-
-            //var original = typeof(Plant).GetMethod("TheMethod");
-
-
-            Log.Message("RimWorld_Plant_Resting.");
-            PropertyInfo RimWorld_Plant_Resting = typeof(RimWorld.Plant).GetProperty("Resting", BindingFlags.NonPublic | BindingFlags.Instance);
-            Main.LogNULL(RimWorld_Plant_Resting, "RimWorld_Plant_Resting", true);
-
-            Log.Message("RimWorld_Plant_Resting_Getter.");
-            MethodInfo RimWorld_Plant_Resting_Getter = RimWorld_Plant_Resting.GetGetMethod(true);
-            Main.LogNULL(RimWorld_Plant_Resting_Getter, "RimWorld_Plant_Resting_Getter", true);
-
-            //var postfix = typeof(MyPatchClass2).GetMethod("SomeMethod");
-
-            var prefix = typeof(PlantRestingPatcher).GetMethod("PrefixMessage", BindingFlags.Public | BindingFlags.Static);
             
-            Main.LogNULL(prefix, "Prefix", true);
+            //Get the Origional Resting Property
+            PropertyInfo RimWorld_Plant_Resting = typeof(RimWorld.Plant).GetProperty("Resting", BindingFlags.NonPublic | BindingFlags.Instance);
+            Main.LogNULL(RimWorld_Plant_Resting, "RimWorld_Plant_Resting", false);
 
-            //harmony.Patch(RimWorld_Plant_Resting_Getter, null, null, new HarmonyMethod(prefix));
+            //Get the Resting Property Getter Method
+            MethodInfo RimWorld_Plant_Resting_Getter = RimWorld_Plant_Resting.GetGetMethod(true);
+            Main.LogNULL(RimWorld_Plant_Resting_Getter, "RimWorld_Plant_Resting_Getter", false);
+           
+            //Get the Prefix Patch
+            var prefix = typeof(PlantRestingPatcher).GetMethod("Prefix", BindingFlags.Public | BindingFlags.Static);
+            Main.LogNULL(prefix, "Prefix", false);
+
+            //Apply the Prefix Patch
             harmony.Patch(RimWorld_Plant_Resting_Getter, new HarmonyMethod(prefix), null);
-            Log.Message("Patched");
+
+            Log.Message("Plants24H, Finished Patching.");
         }
 
-
+        /// <summary>
+        /// Debug Logging Helper
+        /// </summary>
+        /// <param name="objectToTest"></param>
+        /// <param name="name"></param>
+        /// <param name="logSucess"></param>
         private static void LogNULL(object objectToTest, String name, bool logSucess = false)
         {
             if (objectToTest == null)
@@ -74,11 +76,15 @@ namespace EnhancedDevelopment.Plants24H.Plants24H
         // - wants instance, result and count
         // - wants to change count
         // - returns a boolean that controls if original is executed (true) or not (false)
-        public static Boolean PrefixMessage(ref bool __result )
+        public static Boolean Prefix(ref bool __result )
         {
+            //Write to log to debug id the patch is running.
             //Log.Message("Prefix Running");
+
+            //This is the result that will be used, note that it was passed as a ref.
             __result = false;
 
+            //Retuen False so the origional method is not executed, overriting the false result.
             return false;
         }
         
