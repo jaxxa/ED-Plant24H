@@ -41,6 +41,7 @@ namespace EnhancedDevelopment.Plants24H.Plants24H
             
             Main.LogNULL(prefix, "Prefix", true);
 
+            //harmony.Patch(RimWorld_Plant_Resting_Getter, null, null, new HarmonyMethod(prefix));
             harmony.Patch(RimWorld_Plant_Resting_Getter, new HarmonyMethod(prefix), null);
             Log.Message("Patched");
         }
@@ -73,9 +74,12 @@ namespace EnhancedDevelopment.Plants24H.Plants24H
         // - wants instance, result and count
         // - wants to change count
         // - returns a boolean that controls if original is executed (true) or not (false)
-        public static void PrefixMessage()
+        public static Boolean PrefixMessage(ref bool __result )
         {
-            Log.Message("Prefix Running");
+            //Log.Message("Prefix Running");
+            __result = false;
+
+            return false;
         }
         
     }
