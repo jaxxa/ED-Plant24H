@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Plants24H\DetourInjector.cs" />
     <Compile Include="Plants24H\Detours\_Plant.cs" />
+    <Compile Include="Plants24H\Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
