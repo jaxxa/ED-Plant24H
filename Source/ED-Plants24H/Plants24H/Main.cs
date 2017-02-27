@@ -29,15 +29,16 @@ namespace EnhancedDevelopment.Plants24H.Plants24H
 
             Log.Message("RimWorld_Plant_Resting.");
             PropertyInfo RimWorld_Plant_Resting = typeof(RimWorld.Plant).GetProperty("Resting", BindingFlags.NonPublic | BindingFlags.Instance);
-            Main.LogNULL(RimWorld_Plant_Resting, "RimWorld_Plant_Resting");
+            Main.LogNULL(RimWorld_Plant_Resting, "RimWorld_Plant_Resting", true);
 
             Log.Message("RimWorld_Plant_Resting_Getter.");
             MethodInfo RimWorld_Plant_Resting_Getter = RimWorld_Plant_Resting.GetGetMethod(true);
-            Main.LogNULL(RimWorld_Plant_Resting_Getter, "RimWorld_Plant_Resting_Getter");
+            Main.LogNULL(RimWorld_Plant_Resting_Getter, "RimWorld_Plant_Resting_Getter", true);
 
             //var postfix = typeof(MyPatchClass2).GetMethod("SomeMethod");
 
-            var prefix = typeof(PlantRestingPatcher).GetMethod("Prefix");
+            var prefix = typeof(PlantRestingPatcher).GetMethod("PrefixMessage");
+            Main.LogNULL(prefix, "Prefix", true);
 
             harmony.Patch(RimWorld_Plant_Resting_Getter, new HarmonyMethod(prefix), new HarmonyMethod(prefix), new HarmonyMethod(prefix));
             Log.Message("Patched");
@@ -61,8 +62,9 @@ namespace EnhancedDevelopment.Plants24H.Plants24H
     }
 
 
-    [HarmonyPatch(typeof(Plant))]
-    [HarmonyPatch("Resting_Getter")]
+    //[HarmonyPatch(typeof(Plant))]
+    //[HarmonyPatch("Add")]
+    //[HarmonyPatch("Resting_Getter")]
     static class PlantRestingPatcher
     {
 
@@ -70,11 +72,10 @@ namespace EnhancedDevelopment.Plants24H.Plants24H
         // - wants instance, result and count
         // - wants to change count
         // - returns a boolean that controls if original is executed (true) or not (false)
-        static void Prefix()
+        static void PrefixMessage()
         {
             Log.Message("Prefix Running");
         }
-
-
+        
     }
 }
