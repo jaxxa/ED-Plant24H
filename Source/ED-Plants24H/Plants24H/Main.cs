@@ -37,10 +37,11 @@ namespace EnhancedDevelopment.Plants24H.Plants24H
 
             //var postfix = typeof(MyPatchClass2).GetMethod("SomeMethod");
 
-            var prefix = typeof(PlantRestingPatcher).GetMethod("PrefixMessage");
+            var prefix = typeof(PlantRestingPatcher).GetMethod("PrefixMessage", BindingFlags.Public | BindingFlags.Static);
+            
             Main.LogNULL(prefix, "Prefix", true);
 
-            harmony.Patch(RimWorld_Plant_Resting_Getter, new HarmonyMethod(prefix), new HarmonyMethod(prefix), new HarmonyMethod(prefix));
+            harmony.Patch(RimWorld_Plant_Resting_Getter, new HarmonyMethod(prefix), null);
             Log.Message("Patched");
         }
 
@@ -72,7 +73,7 @@ namespace EnhancedDevelopment.Plants24H.Plants24H
         // - wants instance, result and count
         // - wants to change count
         // - returns a boolean that controls if original is executed (true) or not (false)
-        static void PrefixMessage()
+        public static void PrefixMessage()
         {
             Log.Message("Prefix Running");
         }
