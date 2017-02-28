@@ -13,3 +13,7 @@ The module changes the plants to grow 24 Hours a day. In the base game plants wi
   
 03.00.00
 * Update to Alpha 14
+
+04.00.00
+* Update to Alpha 16
+* Now using Harmony Library
