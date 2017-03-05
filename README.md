@@ -1,6 +1,11 @@
 # ED-Plants24H
 The module changes the plants to grow 24 Hours a day. In the base game plants will rest at night time and stop growing, regardless of the light levels. This removed that restriction so plants will keep growing, if all the other conditions such as light are still met, allowing your sunlamps to effectively increase the growing speed.
 
+This mod used the Harmony Library. The .dll of the Library is included in the download, you do not need to install it separately.
+https://github.com/pardeike/Harmony
+https://ludeon.com/forums/index.php?topic=29517.0
+
+
 #Change Log
 
 01.00.00
