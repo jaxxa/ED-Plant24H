@@ -4,7 +4,10 @@
 	<author>Jaxxa</author>
 	<targetVersion>0.16.1393</targetVersion>
 	<url>https://ludeon.com/forums/index.php?topic=15606.0</url>
-	<description>Version: 04.00.00
+	<description>Version: 04.00.01
+
+Discussion, Non Steam Downloads and GitHub Repositories of this mod is available at: https://ludeon.com/forums/index.php?topic=18995
+	
 This mod used the Harmony Library. The .dll of the Library is included in the download, you do not need to install it separately.
 https://github.com/pardeike/Harmony
 https://ludeon.com/forums/index.php?topic=29517.0
