@@ -33,7 +33,7 @@
   <ItemGroup>
     <Reference Include="0Harmony, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\Harmony\1.0.9\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\..\lib\Harmony\1.0.9.1\Release\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\lib\A16\A16.1393\Assembly-CSharp.dll</HintPath>

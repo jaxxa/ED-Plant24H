@@ -24,4 +24,7 @@ https://ludeon.com/forums/index.php?topic=29517.0
 * Now using Harmony Library
 
 04.00.01
-* Updating Harmony Version
+* Updating Harmony Version 1.0.9.0
+
+04.00.02
+ * Updating To Harmony 1.0.9.1
